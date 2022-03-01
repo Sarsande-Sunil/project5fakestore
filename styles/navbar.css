@@ -1,0 +1,30 @@
+
+#options {
+  border: 1px solid black;
+  background-color: darkorange;
+  display: flex;
+  justify-content: space-evenly;
+  height: 50px;
+}
+a {
+  text-decoration: none;
+}
+#data{
+  display: grid;
+  grid-template-columns: repeat(4,25%);
+  gap: 20px;
+  margin-top: 20px;
+}
+img{
+  width: 250px;
+  height: 250px;
+}
+#main{
+  width: 100%;
+  height: 1000px;
+  border: 1px solid black;
+}
+h3 a{
+  font-size: 25px;
+  color: white;
+}

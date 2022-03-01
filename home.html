@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/navbar.css">
+</head>
+<body>
+  <div id="container"></div>
+ <div id="main">
+    <div id="data"></div>
+ </div>
+</body>
+</html>
+<script type="module">
+  //api key  a8b32b6df66c4514804169177ae454fa
+  //api https://newsapi.org/v2/top-headlines?country=us&apiKey=a8b32b6df66c4514804169177ae454fa
+
+  import { getData, appendData } from "./scripts/showData.js";
+  console.log("getData,appenddata",getData,appendData);
+  import navbar from "./components/sidebar.js";
+  console.log("navbar",navbar);
+  
+   let container = document.getElementById("container");
+   let data_div = document.getElementById("data");
+   container.innerHTML = navbar();
+
+   let response = getData(`https://fakestoreapi.com/products/category/electronics`);
+
+   response.then(function(res){
+    console.log("res",res)
+    appendData(res,data_div);
+   });
+
+</script>
